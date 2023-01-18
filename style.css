@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(to right, cyan, lime);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    width: inherit;
+    background-color: rgb(10, 27, 14);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+h1{ 
+    text-align: center;
+    color: white;
+    font-weight: 300;
+}
+.game-container{
+    width: 700px;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 30px;
+    margin: auto;
+    padding: 0 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+.results{
+    outline: none;
+    grid-row: 5;
+    grid-column: 1/ span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameButton{
+    background-color: transparent;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 50px;
+    cursor: cell;
+}
+.gameButton:hover{
+    /* background-image: linear-gradient(to right, yellow, pink); */
+    background-color: rgba(237, 250, 230,0.5);
+}
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+}
+.player-1, .player-2{
+    width: 80%;
+    height: 40px;
+    outline: none;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 30px;
+    /* padding-left: 20px; */
+}
+span{
+    font-size: 18px;
+    font-family: monospace;
+}
+input::placeholder{
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+}
+.reset{
+    outline: none;
+    border: none;
+    background-color: aquamarine;
+    /* background-color: transparent; */
+    width: 80%;
+    height: 40px;
+    border-radius: 30px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 40px;
+    /* font-weight: bold; */
+}
+.reset:hover{
+    background-color: rgb(89, 254, 199);
+}
+input{
+    font-family: monospace;
+    text-align: center;
+}
+.dynamic{
+    outline: none;
+    border: none;
+    /* background-color: aquamarine; */
+    background-color: transparent;
+    width: 80%;
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: medium;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
