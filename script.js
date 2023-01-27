@@ -60,6 +60,12 @@ startButton.addEventListener("click", function(){
             buttonClick.play()
             element.innerHTML = turn
             gameWin()
+            if (bucket == 9){
+                footerDisplay.innerHTML = "Game Draw..."
+                gameStart.pause()
+                gameDraw.play()
+                return
+            }
             if (!isgameover){
                 turn = changeTurn()
                 playerName = nameChangeOnFooterDisplay()
