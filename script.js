@@ -9,6 +9,7 @@ let defaultStr = "'s turn"
 let gameStart= new Audio("music.mp3")
 let buttonClick = new Audio("click3.mp3")
 let gameWinSound = new Audio("winning.mp3")
+let gameDraw = new Audio("draw.mp3")
 let playerName = ""
 let isgameover = false
 
@@ -55,6 +56,7 @@ startButton.addEventListener("click", function(){
     buttonClick.play()
     playerName = player1.value 
     footerDisplay.innerHTML = playerName + defaultStr
+    let bucket = 1
     Array.from(gameButton).forEach(element => {
         element.addEventListener("click", function(){
             buttonClick.play()
@@ -71,6 +73,8 @@ startButton.addEventListener("click", function(){
                 playerName = nameChangeOnFooterDisplay()
                 footerDisplay.innerHTML = playerName + defaultStr
             }
+            console.log(bucket)
+            bucket = bucket + 1
         })
     })
 })
