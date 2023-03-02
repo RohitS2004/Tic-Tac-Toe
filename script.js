@@ -52,35 +52,37 @@ const nameChangeOnFooterDisplay = () =>{
 
 // Game Logic 
 startButton.addEventListener("click", function(){
-    if (startButton.innerHTML == "Start"){
-    startButton.innerHTML = "Reset"
+    if(startButton.innerHTML == "Start"){
+        startButton.innerHTML = "Reset"
+        // startButton.style.background = "lavender";
         gameStart.play()
-    buttonClick.play()
-    playerName = player1.value 
-    footerDisplay.innerHTML = playerName + defaultStr
-    let bucket = 1
-    Array.from(gameButton).forEach(element => {
-        element.addEventListener("click", function(){
-            buttonClick.play()
-            element.innerHTML = turn
-            gameWin()
-            if (bucket == 9){
-                footerDisplay.innerHTML = "Game Draw..."
-                gameStart.pause()
-                gameDraw.play()
-                return
-            }
-            if (!isgameover){
-                turn = changeTurn()
-                playerName = nameChangeOnFooterDisplay()
-                footerDisplay.innerHTML = playerName + defaultStr
-            }
-            console.log(bucket)
-            bucket = bucket + 1
+        buttonClick.play()
+        playerName = player1.value 
+        footerDisplay.innerHTML = playerName + defaultStr
+        let bucket = 1
+        Array.from(gameButton).forEach(element => {
+            element.addEventListener("click", function(){
+                buttonClick.play()
+                element.innerHTML = turn
+                gameWin()
+                if (bucket == 9){
+                    footerDisplay.innerHTML = "Game Draw..."
+                    gameStart.pause()
+                    gameDraw.play()
+                    return
+                }
+                if (!isgameover){
+                    turn = changeTurn()
+                    playerName = nameChangeOnFooterDisplay()
+                    footerDisplay.innerHTML = playerName + defaultStr
+                }
+                console.log(bucket)
+                bucket = bucket + 1
+            })
         })
-    })
     }else{
         startButton.innerHTML = "Start";
         window.location.reload(); // To reload the whole game
+        
     }
 })
