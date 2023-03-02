@@ -53,6 +53,7 @@ const nameChangeOnFooterDisplay = () =>{
 // Game Logic 
 startButton.addEventListener("click", function(){
     if (startButton.innerHTML == "Start"){
+    startButton.innerHTML = "Reset"
         gameStart.play()
     buttonClick.play()
     playerName = player1.value 
