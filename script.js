@@ -52,7 +52,8 @@ const nameChangeOnFooterDisplay = () =>{
 
 // Game Logic 
 startButton.addEventListener("click", function(){
-    gameStart.play()
+    if (startButton.innerHTML == "Start"){
+        gameStart.play()
     buttonClick.play()
     playerName = player1.value 
     footerDisplay.innerHTML = playerName + defaultStr
@@ -77,4 +78,8 @@ startButton.addEventListener("click", function(){
             bucket = bucket + 1
         })
     })
+    }else{
+        startButton.innerHTML = "Start";
+        window.location.reload(); // To reload the whole game
+    }
 })
