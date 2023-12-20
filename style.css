@@ -5,6 +5,7 @@
 }
 body{
     background: linear-gradient(to right, rgb(255, 246, 83), rgb(123, 123, 255));
+
 }
 nav{
     width: inherit;
@@ -137,3 +138,23 @@ input{
     }
   }
 
+  
+  @media only screen and (max-width: 480px) {
+    body{
+        width: 90%;
+
+    }
+    .game-container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 5px;
+    }
+
+    .gameButton {
+        font-size: 30px;
+    }
+
+    .display {
+        font-size: 16px;
+    }
+}
