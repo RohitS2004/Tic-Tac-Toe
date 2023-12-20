@@ -144,6 +144,9 @@ input{
         width: 90%;
 
     }
+    nav{
+        width: 28.1rem;
+    }
     .game-container {
         max-width: 100%;
         grid-template-columns: repeat(3, 1fr);
