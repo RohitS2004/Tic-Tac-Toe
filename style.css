@@ -1,12 +1,12 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: monospace;
 }
-body {
+body{
     background: linear-gradient(to right, rgb(255, 246, 83), rgb(123, 123, 255));
 }
-nav {
+nav{
     width: inherit;
     background-color: rgb(10, 27, 14);
     height: 40px;
@@ -14,13 +14,13 @@ nav {
     align-items: center;
     padding-left: 10px;
 }
-h1 {
+h1{ 
     text-align: center;
     color: white;
     font-weight: 300;
     font-size: 30px;
 }
-.game-container {
+.game-container{
     width: 700px;
     height: 500px;
     border: 3px solid black;
@@ -33,38 +33,33 @@ h1 {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(3, 1fr);
 }
-.results {
+.results{
     outline: none;
     grid-row: 5;
-    grid-column: 1 / span 3;
+    grid-column: 1/ span 3;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.gameButton {
+.gameButton{
     background-color: transparent;
     border: 1px solid black;
     text-align: center;
     font-size: 50px;
     cursor: cell;
 }
-.gameButton:hover {
-    background-color: rgba(237, 250, 230, 0.5);
+.gameButton:hover{
+    background-color: rgba(237, 250, 230,0.5);
 }
-/* .gameButton:disabled {
-    color: black;
-    background-color: rgba(128, 128, 128, 0.3);
-} */
-label {
+label{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-weight: bold;
 }
-.player-1,
-.player-2 {
+.player-1, .player-2{
     width: 80%;
     height: 40px;
     outline: none;
@@ -73,14 +68,14 @@ label {
     border-bottom: 2px solid black;
     font-size: 20px;
 }
-span {
+span{
     font-size: 18px;
 }
-input::placeholder {
+input::placeholder{
     font-weight: bold;
     text-align: center;
 }
-.start {
+.start{
     outline: none;
     border: none;
     background-color: rgb(89, 235, 254);
@@ -94,13 +89,13 @@ input::placeholder {
     font-weight: 900;
     font-size: 20px;
 }
-.start:hover {
+.start:hover{
     background-color: rgb(152, 250, 255);
 }
-input {
+input{
     text-align: center;
 }
-.display {
+.display{
     outline: none;
     border: none;
     background-color: transparent;
@@ -112,16 +107,16 @@ input {
     font-size: 30px;
     font-weight: medium;
 }
-.bl-0 {
+.bl-0{
     border-left: 0;
 }
-.br-0 {
+.br-0{
     border-right: 0;
 }
-.bt-0 {
+.bt-0{
     border-top: 0;
 }
-.bb-0 {
+.bb-0{
     border-bottom: 0;
 }
 
@@ -156,29 +151,25 @@ input {
         padding-left: 0px;
         font-size: 23px;
         border-radius: 0px; /* So the 'L' doesn't look cut off*/
-        padding-left: 5px;
+        padding-left:5px;
     }
 }
 
-#screen {
+#screen{
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3s steps(22, end) forwards, blink 1s infinite;
+    animation: typing 3s steps(22, end) forwards,  blink 1s infinite;
 }
 @keyframes typing {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-@keyframes blink {
-    0%,
-    100% {
-        border-right: 2px solid transparent;
+    0% { width:0% }
+    100% { width:100% }
+  }
+  @keyframes blink {
+    0%,100% {
+      border-right:2px solid transparent;
     }
     50% {
-        border-right: 1px solid transparent;
+      border-right:1px solid transparent;
     }
-}
+  }
+
