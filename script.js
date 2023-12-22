@@ -39,6 +39,11 @@ const gameWin = () =>{
             isgameover = true
             gameStart.pause()
             gameWinSound.play()
+
+            // Disable all game buttons
+            gameButton.forEach(button => {
+                button.disabled = true;
+            });
         }
     })
 }
