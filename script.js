@@ -15,11 +15,16 @@ let isgameover = false
 
 // Function for changing the turn 
 const changeTurn = () => {
-    return turn === "X"? "O" : "X";
+    if (turn === "X"){ 
+        return "0";
+    }
+    else{
+        return "X";
+    }
 }
 
 // Game winning Logic and Game Draw Logic
-const gameWin = () =>{
+const gameWin = (moveCounter) =>{
     let boxText = document.querySelectorAll(".gameButton")
     wins = [
         [0, 1, 2],
@@ -45,6 +50,12 @@ const gameWin = () =>{
                 button.disabled = true;
             });
         }
+        else if  (moveCounter == 9){
+            footerDisplay.innerHTML = "It's a draw..."
+            isgameover = true
+            gameStart.pause()
+            gameDraw.play()
+        }
     })
 }
 
@@ -64,14 +75,14 @@ startButton.addEventListener("click", function(){
         buttonClick.play()
         playerName = player1.value 
         footerDisplay.innerHTML = playerName + defaultStr
-        let bucket = 1
+        let moveCounter = 1
         Array.from(gameButton).forEach(element => {
             element.addEventListener("click", function(){
                 buttonClick.play()
                 element.innerHTML = turn
                 gameWin()
-                if (bucket == 9){
-                    footerDisplay.innerHTML = "Game Draw..."
+                if (moveCounter == 9){
+                    gameWin(moveCounter)
                     gameStart.pause()
                     gameDraw.play()
                     return
@@ -81,8 +92,8 @@ startButton.addEventListener("click", function(){
                     playerName = nameChangeOnFooterDisplay()
                     footerDisplay.innerHTML = playerName + defaultStr
                 }
-                console.log(bucket)
-                bucket = bucket + 1
+                console.log(moveCounter)
+                moveCounter = moveCounter + 1
             })
         })
     }else{
