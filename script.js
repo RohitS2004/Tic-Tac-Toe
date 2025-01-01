@@ -70,7 +70,6 @@ const nameChangeOnFooterDisplay = () =>{
 startButton.addEventListener("click", function(){
     if(startButton.innerHTML == "Start"){
         startButton.innerHTML = "Reset"
-        // startButton.style.background = "lavender";
         gameStart.play()
         buttonClick.play()
         playerName = player1.value 
