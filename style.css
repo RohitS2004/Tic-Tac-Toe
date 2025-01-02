@@ -4,7 +4,7 @@
     font-family: monospace;
 }
 body{
-    background: linear-gradient(to right, rgb(255, 246, 83), rgb(123, 123, 255));
+    background: linear-gradient(to right, rgb(195, 189, 65), rgb(123, 123, 255));
 }
 nav{
     width: inherit;
